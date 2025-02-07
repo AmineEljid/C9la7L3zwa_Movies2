@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3ZAWA Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3ZAWA Movies</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    
+        <!-- شريط التنقل -->
+        <nav>
+            <div class="logo">
+                <span class="blue-text">L3ZAWA</span>
+                <span class="purple-text">Movies</span>
+            </div>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="anime.html"> الأنمي </a></li> 
+ 
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="ابحث عن فيلم، مسلسل، أنمي...">
+                        <button id="searchButton">🔍</button>
+                    </div>
+                </li>
+                <li><button id="darkModeToggle">🌙</button></li>
+            </ul>
+        </nav>
+
+    <!DOCTYPE html>
+    <html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>الأنمي</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                direction: rtl;
+                background-color: #91d50a;
+                margin: 0;
+                padding: 20px;
+            }
+/* قائمة الأنميات */
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.movie {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.movie img:hover {
+    opacity: 0.8;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.blue-text {
+    color: #007bff;
+}
+
+.purple-text {
+    color: #800080;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3ZAWA Movies</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="ar">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>L3ZAWA Movies</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+<!-- قائمة الأنميات -->
+<div class="anime-container">
+    <div class="anime" onclick="window.location.href='watch.html?video=video9.mp4'">
+        <img src="Solo leveling.jpg" alt="Attack on Titan">
+        <p>أنمي Attack on Titan مترجم</p>
+    </div>
+    <div class="anime" onclick="window.location.href='watch.html?video=video9.mp4'">
+        <img src="One piece.jpg" alt="Demon Slayer">
+        <p>أنمي Demon Slayer مترجم</p>
+    </div>
+    <div class="anime" onclick="window.location.href='watch.html?video=video9.mp4'">
+        <img src="Demon Slayer.jpg" alt="One Piece">
+        <p>أنمي One Piece مترجم</p>
+    </div>
+    <div class="anime" onclick="window.location.href='watch.html?video=video9.mp4'">
+        <img src="Attack On Titan.webp" alt="Solo Leveling">
+        <p>أنمي Solo Leveling مترجم</p>
+    </div>
+    <div class="anime" onclick="window.location.href='watch.html?video=video9.mp4'">
+        <img src="Naruto.jpg" alt="Naruto">
+        <p>أنمي Naruto مترجم</p>
+    </div>
+    <div class="anime" onclick="window.location.href='watch.html?video=video9.mp4'">
+        <img src="DeathNote.jpg" alt="Death Note">
+        <p>أنمي Death Note مترجم</p>
+    </div>
+    <div class="anime" onclick="window.location.href='watch.html?video=video9.mp4'">
+        <img src="JujutsuKaisen.jpg" alt="Jujutsu Kaisen">
+        <p>أنمي Jujutsu Kaisen مترجم</p>
+    </div>
+    <div class="anime" onclick="window.location.href='watch.html?video=video9.mp4'">
+        <img src="Bleach.jpg" alt="Bleach">
+        <p>أنمي Bleach مترجم</p>
+    </div>
+</div>

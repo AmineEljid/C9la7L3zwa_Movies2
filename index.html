@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3ZAWA Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3ZAWA Movies</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- شريط الأفلام المميزة -->
+        <div class="featured-movies">
+            <div class="movie-list">
+                <a href="watch.html?movie=1"><img src="movie1.jpg" alt="Movie 1"></a>
+                <a href="watch.html?movie=2"><img src="movie2.jpg" alt="Movie 2"></a>
+                <a href="watch.html?movie=3"><img src="movie3.jpg" alt="Movie 3"></a>
+                <a href="watch.html?movie=4"><img src="movie4.jpg" alt="Movie 4"></a>
+            </div>
+        </div>
+    
+        <script>
+            // تفعيل الوضع الداكن
+            document.getElementById("darkModeToggle").addEventListener("click", function() {
+                document.body.classList.toggle("dark-mode");
+            });
+    
+            // البحث عند النقر على زر البحث
+            document.getElementById("searchButton").addEventListener("click", function() {
+                let query = document.getElementById("searchInput").value;
+                if (query.trim() !== "") {
+                    window.location.href = `search.html?q=${query}`;
+                }
+            });
+        </script>
+    
+    </body>
+    </html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>أفلام</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                direction: rtl;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 20px;
+            }
+    
+            /* شريط التمرير */
+            .carousel {
+                width: 90%;
+                margin: 20px auto;
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+            }
+    
+            .carousel-track {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+            .carousel img {
+                width: 100%;
+                max-height: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+    
+            /* قائمة الأفلام */
+            .movies-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                padding: 20px;
+            }
+    
+            .movie {
+                position: relative;
+                cursor: pointer;
+                transition: transform 0.3s;
+            }
+    
+            .movie:hover {
+                transform: scale(1.05);
+            }
+    
+            .movie img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: 0.3s;
+            }
+    
+            .movie img:hover {
+                opacity: 0.8;
+            }
+    
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: #222;
+                color: white;
+            }
+    
+            .logo {
+                font-size: 20px;
+                font-weight: bold;
+            }
+    
+            .blue-text {
+                color: #007bff;
+            }
+    
+            .purple-text {
+                color: #800080;
+            }
+    
+            nav ul {
+                list-style: none;
+                display: flex;
+                padding: 0;
+            }
+    
+            nav ul li {
+                margin: 0 10px;
+            }
+    
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="ar">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>L3ZAWA Movies</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <!DOCTYPE html>
+            <html lang="ar">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>L3ZAWA Movies</title>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+            
+                <!-- شريط التنقل -->
+                <nav>
+                    <div class="logo">
+                        <span class="blue-text">L3ZAWA</span>
+                        <span class="purple-text">Movies</span>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="popular.html">الأفلام الشائعة</a></li>
+                        <li><a href="anime.html"> الأنمي</a></li>
+                        <li><a href="series.html">المسلسلات</a></li>
+                        <li><a href="favorites.html">المفضلة</a></li>
+                        <li>
+                            <div class="search-box">
+                                <input type="text" id="searchInput" placeholder="ابحث عن فيلم، مسلسل، أنمي...">
+                                <button id="searchButton">🔍</button>
+                            </div>
+                        </li>
+                        <li><button id="darkModeToggle">🌙</button></li>
+                    </ul>
+                </nav>
+            
+                <!-- شريط الأفلام المميزة -->
+                <div class="featured-movies">
+                    <div class="movie-list">
+                        <a href="watch.html?movie=1"><img src="The platform.jpg" alt="The platform "></a>
+                        <a href="watch.html?movie=2"><img src="Interstellar.jpg" alt="Interstellar "></a>
+                        <a href="watch.html?movie=3"><img src="Oppenheimer.jpg" alt="Oppenheimer "></a>
+                        <a href="watch.html?movie=4"><img src="Johnny english.jpg" alt="Johnny english "></a>
+                        <a href="watch.html?movie=4"><img src="John wick.jpg" alt="John wick "></a>
+                        <a href="watch.html?movie=4"><img src="Solo leveling.jpg" alt="Solo leveling "></a>
+                        <a href="watch.html?movie=4"><img src="Pirates os the caribbean.jpg" alt="Pirates os the caribbean "></a>
+                        <a href="watch.html?movie=1"><img src="Demon Slayer.jpg" alt="Demon Slayer "></a>
+                        <a href="watch.html?movie=1"><img src="Game of Thronse.jpg" alt="Game of Thronse "></a>
+
+                    </div>
+                </div>
+            
+                <script>
+                    // تفعيل الوضع الداكن
+                    document.getElementById("darkModeToggle").addEventListener("click", function() {
+                        document.body.classList.toggle("dark-mode");
+                    });
+            
+                    // البحث عند النقر على زر البحث
+                    document.getElementById("searchButton").addEventListener("click", function() {
+                        let query = document.getElementById("searchInput").value;
+                        if (query.trim() !== "") {
+                            window.location.href = `search.html?q=${query}`;
+                        }
+                    });
+                </script>
+            
+            </body>
+            </html>
+            <!-- قائمة الأفلام -->
+            <div class="movies-container">
+                <div class="movie" onclick="window.location.href='watch.html?video=video1.mp4'">
+                    <img src="images/American Psycho.jpg" alt="The Platform">
+                    <p>فيلم The Platform مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video2.mp4'">
+                    <img src="images/Attack On Titan.webp" alt="Matrix">
+                    <p>فيلم Matrix مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video3.mp4'">
+                    <img src="images/Bleach.jpg" alt="One piece">
+                    <p>الأنمي One piece مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video3.mp4'">
+                    <img src="images/DeathNote.jpg" alt="Forrest Gump">
+                    <p>فيلم Forrest Gump مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video9.mp4'">
+                    <img src="images/Demon Slayer.jpg" alt="Game of Thronse">
+                    <p>مسلسل، Game of Thronse مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video5.mp4'">
+                    <img src="images/Fight Club.jpg" alt="Inception">
+                    <p>فيلم Inception مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video6.mp4'">
+                    <img src="images/Forrest Gump.jpg" alt="Lord Of The Rings">
+                    <p>فيلم Lord Of The Rings مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video9.mp4'">
+                    <img src="images/Game of Thronse.jpg" alt="Solo leveling">
+                    <p>الأنمي Solo leveling مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video7.mp4'">
+                    <img src="images/Inception.jpg" alt="Schindler's List">
+                    <p>فيلم Schindler's List مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video8.mp4'">
+                    <img src="images/Interstellar.jpg" alt="Fight Club">
+                    <p>فيلم Fight Club مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video9.mp4'">
+                    <img src="images/John wick.jpg" alt="The Godfather">
+                    <p>فيلم The Godfather مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video9.mp4'">
+                    <img src="images/Johnny english.jpg" alt="The Walking Dead">
+                    <p>مسلسل، The Walking Dead مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=interstellar'">
+                    <img src="images/JujutsuKaisen.jpg" alt="Interstellar">
+                    <p>فيلم Interstellar مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video9.mp4'">
+                    <img src="images/Lord Of Rings.jpg" alt="Johnny english">
+                    <p>فيلم Johnny english مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video9.mp4'">
+                    <img src="images/Matrix.jpg" alt="Demon Slayer">
+                    <p>الأنمي Demon Slayer مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video9.mp4'">
+                    <img src="images/Naruto.jpg" alt="Oppenheimer">
+                    <p>فيلم Oppenheimer مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video9.mp4'">
+                    <img src="images/One piece.jpg" alt="Game of Thronse">
+                    <p>مسلسل، Game of Thronse مترجم</p>
+                </div>
+                <div class="movie" onclick="window.location.href='watch.html?video=video4.mp4'">
+                    <img src="images/Oppenheimer.jpg" alt="Pulp Fiction">
+                    <p>فيلم Pulp Fiction مترجم</p>
+                </div>
+
+            </div>
+        </body>
+        </html>
+        <a href="watch.html?video=https://yourvideolink.com
+        &title=فيلم+الأكشن
+        &story=تدور+أحداث+الفيلم+حول...
+        &genre=أكشن،+إثارة
+        &quality=1080p+HD
+        &duration=2+ساعتين
+        &director=جون+دو
+        &poster=https://yourimageurl.com
+        &download=https://yourdownloadlink.com" target="_blank">
+            مشاهدة الآن
+        </a>
+    </body>
+    </html>
+        
+                
+                    <script>
+                        fetch('movies.json')
+                            .then(response => response.json())
+                            .then(movies => {
+                                const moviesList = document.getElementById('moviesList');
+            
+                                movies.forEach(movie => {
+                                    const movieDiv = document.createElement('div');
+                                    movieDiv.classList.add('movie');
+                
+                                    movieDiv.innerHTML = `
+                                        <img src="${movie.poster}" alt="${movie.title}">
+                                        <h3>${movie.title}</h3>
+                                    
+                                    `;
+                
+                                    moviesList.appendChild(movieDiv);
+                                });
+                            });
+                
+                        function watchMovie(movieId) {
+                            window.location.href = watch.html?id= $:{movieId} ;
+                        } 
+                    </script>
+                <!DOCTYPE html>
+                <html lang="ar">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>أفلام</title>
+                    <link rel="stylesheet" href="style.css">
+                </head>
+                <body>
+                
+                    <script src="script.js"></script>
+                </body>
+                </html>
+                </body>
+                </html>
+        
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+</body>
+</html>

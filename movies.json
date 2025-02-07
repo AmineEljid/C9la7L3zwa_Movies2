@@ -1,0 +1,35 @@
+[
+  
+    {
+        "id": 1,
+        "title": "Inception",
+        "poster": "Inception.jpg",
+        "video": "server1.mp4",
+        "servers": [
+            { "name": "سيرفر 1", "url": "server1.mp4" },
+            { "name": "سيرفر 2", "url": "server2.mp4" },
+            { "name": "سيرفر 3", "url": "server3.mp4" }
+        ],
+        "downloads": [
+            { "name": "سيرفر 1", "url": "server1-download.mp4" },
+            { "name": "سيرفر 2", "url": "server2-download.mp4" },
+            { "name": "سيرفر 3", "url": "server3-download.mp4" }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "The Matrix",
+        "poster": "Matrix.jpg",
+        "video": "matrix-server1.mp4",
+        "servers": [
+            { "name": "سيرفر 1", "url": "matrix-server1.mp4" },
+            { "name": "سيرفر 2", "url": "matrix-server2.mp4" },
+            { "name": "سيرفر 3", "url": "matrix-server3.mp4" }
+        ],
+        "downloads": [
+            { "name": "سيرفر 1", "url": "matrix-server1-download.mp4" },
+            { "name": "سيرفر 2", "url": "matrix-server2-download.mp4" },
+            { "name": "سيرفر 3", "url": "matrix-server3-download.mp4" }
+        ]
+    }
+]

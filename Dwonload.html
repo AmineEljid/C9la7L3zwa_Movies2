@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل الفيلم</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .movie-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .movie-header img {
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .movie-info {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .movie-info h2 {
+            margin-bottom: 10px;
+            color: #00AEEF;
+        }
+
+        .movie-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .download-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .download-btn {
+            background: #ff3333;
+        }
+
+        .btn small {
+            display: block;
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="movie-header">
+            <img id="moviePoster" src="https://via.placeholder.com/250x370" alt="صورة الفيلم">
+            <div class="movie-info">
+                <h2 id="movieTitle">عنوان الفيلم</h2>
+                <p id="movieStory">هذه هي قصة الفيلم التي سيتم عرضها هنا...</p>
+                <p><strong>النوع:</strong> <span id="movieGenre">أكشن، دراما</span></p>
+                <p><strong>الجودة:</strong> <span id="movieQuality">1080p HD</span></p>
+                <p><strong>المدة:</strong> <span id="movieDuration">1 ساعة و 45 دقيقة</span></p>
+                <p><strong>المخرج:</strong> <span id="movieDirector">اسم المخرج</span></p>
+            </div>
+        </div>
+
+        <div class="download-container">
+            <a href="#" id="downloadLink" class="btn download-btn">تحميل الفيلم <small>اضغط هنا للتحميل</small></a>
+        </div>
+
+        <button class="close-btn" onclick="window.close()">إغلاق الصفحة</button>
+    </div>
+
+    <script>
+        // استخراج بيانات الفيلم من الـ URL
+        const urlParams = new URLSearchParams(window.location.search);
+    
+        const story = urlParams.get('story') || "لا توجد قصة متاحة.";
+        const genre = urlParams.get('genre') || "غير محدد";
+        const quality = urlParams.get('quality') || "غير متوفر";
+        const duration = urlParams.get('duration') || "غير متوفر";
+        const director = urlParams.get('director') || "غير معروف";
+        const poster = urlParams.get('poster') || "https://via.placeholder.com/250x370";
+        const download = urlParams.get('download') || "#";
+
+        // تحديث صفحة التحميل بالبيانات
+        document.getElementById("movieTitle").innerText = title;
+        document.getElementById("movieStory").innerText = story;
+        document.getElementById("movieGenre").innerText = genre;
+        document.getElementById("movieQuality").innerText = quality;
+        document.getElementById("movieDuration").innerText = duration;
+        document.getElementById("movieDirector").innerText = director;
+        document.getElementById("moviePoster").src = poster;
+        document.getElementById("downloadLink").href = download;
+    </script>
+
+</body>
+</html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاهدة وتحميل الفيلم</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        video {
+            width: 80%;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn-download {
+            background-color: #800080;
+        }
+        .btn-download:hover {
+            background-color: #a020a0;
+        }
+        .btn-stream {
+            background-color: #007bff;
+        }
+        .btn-stream:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="movieTitle"></h1>
+    
+    <video controls id="movieVideo">
+        <source src="" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+
+    <h2>سيرفرات التحميل:</h2>
+    <ul id="downloadServers"></ul>
+
+    <h2>سيرفرات المشاهدة:</h2>
+    <ul id="streamingServers"></ul>
+
+    <script>
+        // استخراج المعلومات من رابط الصفحة
+        const params = new URLSearchParams(window.location.search);
+        const title = params.get('title') || "فيلم غير معروف";
+        const video = params.get('video') || "";
+
+        document.getElementById('movieTitle').innerText = title;
+        document.getElementById('movieVideo').src = video;
+
+        // قائمة السيرفرات
+        const downloadServers = [
+            { name: "تحميل مباشر 1", url: "server1-download.mp4" },
+            { name: "تحميل مباشر 2", url: "server2-download.mp4" }
+        ];
+
+        const streamingServers = [
+            { name: "مشاهدة مباشرة 1", url: "#" },
+            { name: "مشاهدة مباشرة 2", url: "#" }
+        ];
+
+        // إضافة السيرفرات إلى الصفحة
+        function addServers(list, servers, className) {
+            servers.forEach(server => {
+                const li = document.createElement('li');
+                li.innerHTML = <a href="${server.url}" class="btn ${className}" target="_blank">${server.name}</a>;
+                list.appendChild(li);
+            });
+        }
+
+        addServers(document.getElementById('downloadServers'), downloadServers, 'btn-download');
+        addServers(document.getElementById('streamingServers'), streamingServers, 'btn-stream');
+    </script>
+
+</body>
+</html>

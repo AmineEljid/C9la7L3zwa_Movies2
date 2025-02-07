@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاهدة الفيلم - L3ZAWA Movies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .site-name {
+            margin-bottom: 20px;
+        }
+
+        .site-name h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .site-name .blue {
+            color: #00AEEF;
+        }
+
+        .site-name .purple {
+            color: #B533FF;
+        }
+
+        .movie-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .movie-header img {
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .movie-info {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .movie-info h2 {
+            margin-bottom: 10px;
+            color: #00AEEF;
+        }
+
+        .movie-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 45%;
+        }
+
+        .watch-btn {
+            background: #00AEEF;
+        }
+
+        .download-btn {
+            background: #ff3333;
+        }
+
+        .btn small {
+            display: block;
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- اسم الموقع -->
+        <div class="site-name">
+            <h1><span class="blue">L3ZAWA</span> <span class="purple">Movies</span></h1>
+        </div>
+
+        <!-- تفاصيل الفيلم -->
+        <div class="movie-header">
+            <img id="moviePoster" src="https://via.placeholder.com/250x370" alt="صورة الفيلم">
+            <div class="movie-info">
+                <h2 id="movieTitle">عنوان الفيلم</h2>
+                <p id="movieStory">هذه هي قصة الفيلم التي سيتم عرضها هنا...</p>
+                <p><strong>النوع:</strong> <span id="movieGenre">أكشن، دراما</span></p>
+                <p><strong>الجودة:</strong> <span id="movieQuality">1080p HD</span></p>
+                <p><strong>المدة:</strong> <span id="movieDuration">1 ساعة و 45 دقيقة</span></p>
+                <p><strong>المخرج:</strong> <span id="movieDirector">اسم المخرج</span></p>
+            </div>
+        </div>
+
+        <!-- مشغل الفيديو -->
+        <div class="video-container">
+            <iframe id="videoPlayer" allowfullscreen></iframe>
+        </div>
+
+        <!-- أزرار المشاهدة والتحميل -->
+        <div class="buttons">
+            <a href="#" id="watchLink" class="btn watch-btn">مشاهدة الآن <small>الذهاب لصفحة المشاهدة</small></a>
+            <a href="#" id="downloadLink" class="btn download-btn">تحميل الآن <small>الذهاب لصفحة التحميل</small></a>
+        </div>
+
+        <button class="close-btn" onclick="window.close()">إغلاق الصفحة</button>
+    </div>
+
+    <script>
+        // استخراج بيانات الفيلم من الـ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const videoSrc = urlParams.get('video');
+        const title = urlParams.get('title') || "عنوان الفيلم غير متوفر";
+        const story = urlParams.get('story') || "لا توجد قصة متاحة.";
+        const genre = urlParams.get('genre') || "غير محدد";
+        const quality = urlParams.get('quality') || "غير متوفر";
+        const duration = urlParams.get('duration') || "غير متوفر";
+        const director = urlParams.get('director') || "غير معروف";
+        const poster = urlParams.get('poster') || "https://via.placeholder.com/250x370";
+        const download = urlParams.get('download') || "#";
+
+        // تحديث صفحة المشاهدة بالبيانات
+        if (videoSrc) {
+            document.getElementById("videoPlayer").src = videoSrc;
+        } else {
+            document.getElementById("videoPlayer").innerHTML = "<p>لم يتم العثور على الفيديو.</p>";
+        }
+
+        document.getElementById("movieTitle").innerText = title;
+        document.getElementById("movieStory").innerText = story;
+        document.getElementById("movieGenre").innerText = genre;
+        document.getElementById("movieQuality").innerText = quality;
+        document.getElementById("movieDuration").innerText = duration;
+        document.getElementById("movieDirector").innerText = director;
+        document.getElementById("moviePoster").src = poster;
+        document.getElementById("watchLink").href = videoSrc;
+        document.getElementById("downloadLink").href = download;
+    </script>
+
+</body>
+</html>
